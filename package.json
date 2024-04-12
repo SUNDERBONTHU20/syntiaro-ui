@@ -1,0 +1,19 @@
+{
+  "name": "syntiaro-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/SUNDERBONTHU20/syntiaro-ui.git"
+  },
+  "author": "sunder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SUNDERBONTHU20/syntiaro-ui/issues"
+  },
+  "homepage": "https://github.com/SUNDERBONTHU20/syntiaro-ui#readme"
+}
