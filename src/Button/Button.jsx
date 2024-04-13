@@ -8,7 +8,7 @@ const button = cva(css.base, {
             secondary: style.secondary,
             success: style.success,
             danger: style.danger
-        }, //intent->default classes primary,secondary
+        }, 
         size: {
             small: style.small,
             medium: style.medium,
@@ -20,7 +20,7 @@ const button = cva(css.base, {
         size: "medium"
     }
 })
-// eslint-disable-next-line react/prop-types
+
 const Button = ({ value, variant, className, as, href, size, ...props }) => {
     if (size) {
         if (size === "sm") {
