@@ -29,7 +29,7 @@ const Button = ({ value, variant, className, as, href, size, ...props }) => {
         if (size === "lg") {
             size = "large"
         }
-        if (size === "medium") {
+        if (size === "md") {
             size = "medium"
         }
     }
