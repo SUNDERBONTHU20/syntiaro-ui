@@ -1,23 +1,15 @@
 {
   "name": "syntiaro-ui",
-  "version": "0.0.5",
-  "description": "A CSS framework designed for quickly constructing unique user interfaces by providing utility classes.",
+  "version": "1.0.0",
+  "description": "",
   "main": "index.js",
   "scripts": {
-   
     "build": "rollup -c --bundleConfigAsCjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/SUNDERBONTHU20/syntiaro-ui.git"
-  },
+  "keywords": [],
   "author": "sunder",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/SUNDERBONTHU20/syntiaro-ui/issues"
-  },
-  "homepage": "https://github.com/SUNDERBONTHU20/syntiaro-ui#readme",
   "devDependencies": {
     "@babel/cli": "^7.23.0",
     "@babel/core": "^7.23.2",
@@ -48,5 +40,8 @@
   "peerDependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
+  },
+  "dependencies": {
+    "class-variance-authority": "^0.7.0"
   }
 }
