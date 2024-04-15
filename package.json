@@ -1,6 +1,6 @@
 {
   "name": "syntiaro-ui",
-  "version": "0.0.3",
+  "version": "0.0.5",
   "description": "A CSS framework designed for quickly constructing unique user interfaces by providing utility classes.",
   "main": "index.js",
   "scripts": {

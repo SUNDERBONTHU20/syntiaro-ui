@@ -1,49 +1,45 @@
-import React from "react";
 import { cva } from "class-variance-authority";
-import style from './style.module.css';
-const button = cva(css.base, {
-    variants: {
-        variant: {
-            primary: style.primary,
-            secondary: style.secondary,
-            success: style.success,
-            danger: style.danger
-        }, 
-        size: {
-            small: style.small,
-            medium: style.medium,
-            large: style.large
-        }
+ 
+const Button = cva(["font-semibold", "border", "rounded"], {
+  variants: {
+    intent: {
+      primary: [
+        "bg-blue-500",
+        "text-white",
+        "border-transparent",
+        "hover:bg-blue-600",
+      ],
+      // **or**
+      // primary: "bg-blue-500 text-white border-transparent hover:bg-blue-600",
+      secondary: [
+        "bg-white",
+        "text-gray-800",
+        "border-gray-400",
+        "hover:bg-gray-100",
+      ],
     },
-    defaultVariants: {
-        variant: "primary",
-        size: "medium"
-    }
-})
-
-const Button = ({ value, variant, className, as, href, size, ...props }) => {
-    if (size) {
-        if (size === "sm") {
-            size = "small";
-        }
-        if (size === "lg") {
-            size = "large"
-        }
-        if (size === "md") {
-            size = "medium"
-        }
-    }
-    if (as === "input") {
-        return <input className={button({ variant, size, className })} value={value} {...props} />
-    }
-    if (href) {
-        return <a href={href} role="button" className={button({ variant, size, className })} {...props}>{value}</a>
-    }
-    return (
-        <>
-            <button className={button({ variant, size, className })}  {...props}>{value}</button>
-        </>
-    )
-};
-
-export default Button;
+    size: {
+      small: ["text-sm", "py-1", "px-2"],
+      medium: ["text-base", "py-2", "px-4"],
+    },
+  },
+  compoundVariants: [
+    {
+      intent: "primary",
+      size: "medium",
+      class: "uppercase",
+      // **or** if you're a React.js user, `className` may feel more consistent:
+      // className: "uppercase"
+    },
+  ],
+  defaultVariants: {
+    intent: "primary",
+    size: "medium",
+  },
+});
+ 
+Button();
+// => "font-semibold border rounded bg-blue-500 text-white border-transparent hover:bg-blue-600 text-base py-2 px-4 uppercase"
+ 
+Button({ intent: "secondary", size: "small" });
+// => "font-semibold border rounded bg-white text-gray-800 border-gray-400 hover:bg-gray-100 text-sm py-1 px-2"
